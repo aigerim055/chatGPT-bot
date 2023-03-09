@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+
+  bot:
+    build:
+        dockerfile: Dockerfile
+        context: .
+    command: bash -c 'python bot.py'
+    volumes:
+        - ./bot:/bot
+#    networks:
+#        - name_net
